@@ -1,0 +1,35 @@
+.zone-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.zone-header-icon {
+  width: 22px;
+  height: 22px;
+  filter: drop-shadow(1px 1px 2px #aaa);
+}
+
+.zone-header-title {
+  color: #2D2D2D;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.Zone_graph {
+border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.00);
+  background: rgba(255, 255, 255, 0.30);
+
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.14),
+              0 0 2px 0  rgba(52, 37, 255, 1) ;  
+  backdrop-filter: blur(9.1px);
+  padding: 0px 12px;
+  transition: all 0.2s ease-in-out;
+ 
+}
+
+

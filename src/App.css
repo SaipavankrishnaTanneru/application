@@ -1,0 +1,36 @@
+.scope_app { 
+  width: 100%; 
+  position: relative;
+}
+
+
+
+aside{
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 100%;
+  width: 15vw;
+  overflow-y: auto;
+  background-color: #FFF;
+  border-right: 1px solid #E5E9EB;
+  padding: 18px 18px 16px 18px;
+  overflow-y: auto; 
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE and Edge */
+}
+
+
+aside::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+
+main{
+  /* max-width: 100%; */
+  padding: 10px 10px 0 10px;
+  background-color: #F6F8F9;
+  margin-top: 54px;
+  margin-left: 15vw;
+}

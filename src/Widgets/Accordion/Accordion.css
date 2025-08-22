@@ -1,0 +1,25 @@
+.accordion-widget {
+
+  margin-bottom: 8px;
+  background: #fff;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.accordion-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.accordion-toggle-icon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}

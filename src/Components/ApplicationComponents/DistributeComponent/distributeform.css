@@ -1,0 +1,106 @@
+/* Container for the entire form */
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 46px;
+}
+  
+
+/* Row layout for two fields side by side */
+.form-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  /* gap: 20px; */
+}
+
+/* Individual field container */
+.form-field {
+  /* flex: 1; */
+  width: 46%;
+}
+
+/* Label styling */
+.form-field label {
+  display: block;
+  font-weight: 400;
+  color:  #344054;
+  font-size: 12px;
+}
+
+
+/* RangeInput component styling */
+.range-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* react-select styling */
+.react-select-container {
+  font-size: 14px;
+}
+
+.react-select__control {
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 2px;
+  background-color: #fff;
+  min-height: 38px;
+  box-shadow: none;
+  transition: border-color 0.2s;
+}
+
+.react-select__control--is-focused {
+  border-color: #007bff;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.3);
+}
+
+.react-select__value-container {
+  padding: 2px 8px;
+}
+
+.react-select__single-value {
+  color: #333;
+}
+
+.react-select__input-container {
+  color: #333;
+}
+
+.react-select__menu {
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 6px;
+}
+
+.react-select__option {
+  padding: 10px;
+  color: #333;
+}
+
+.react-select__option--is-focused {
+  background-color: #e9ecef;
+}
+
+.react-select__option--is-selected {
+  background-color: #007bff;
+  color: white;
+}
+
+/* Error message styling */
+.error-message {
+  color: #dc3545;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+
+/* Loading state */
+.form-container > div:not(.form-row) {
+  text-align: center;
+  font-size: 16px;
+  color: #666;
+}
+
