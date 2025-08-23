@@ -2,7 +2,7 @@ import React from "react";
 import AccordionWidget from "../../../Widgets/Accordion/Accordion";
 import GraphWidget from "../../../Widgets/GraphWidget/BarGraph";
 import zoneIcon from "../../../assets/Paper.svg";
-import "./ZoneGraph.css";
+import styles from "./ZoneGraph.module.css";   // ⬅️ use CSS module
 
 const ZoneGraph = () => {
   const data = [
@@ -13,19 +13,41 @@ const ZoneGraph = () => {
   ];
 
   const bars = [
-    { dataKey: "Issued", color: "#0000ff" },
-    { dataKey: "Sold", color: "#ffa500" },
+    {
+      dataKey: "Issued",
+      gradientType: "linear",
+      gradient: [
+        { offset: "0%", color: "#F31616" },
+        { offset: "100%", color: "#8D0D6F" },
+      ],
+      legendColor: "#F31616",
+      label: "Issued",
+    },
+    {
+      dataKey: "Sold",
+      gradientType: "radial",
+      gradient: [
+        { offset: "0%", color: "#45D92E" },
+        { offset: "100%", color: "#07968F" },
+      ],
+      legendColor: "#45D92E",
+      label: "Sold",
+    },
   ];
 
   return (
-    <div className="Zone_graph mt-2">
+    <div className={`${styles.zoneGraph} mt-2`}>
       <AccordionWidget
         id="zone-graph"
         className="zone-accordion"
         title={
-          <div className="zone-header">
-            <img src={zoneIcon} alt="Zone Icon" className="zone-header-icon" />
-            <span className="zone-header-title">Zone Wise Graph</span>
+          <div className={styles.zoneHeader}>
+            <img
+              src={zoneIcon}
+              alt="Zone Icon"
+              className={styles.zoneHeaderIcon}
+            />
+            <span className={styles.zoneHeaderTitle}>Zone Wise Graph</span>
           </div>
         }
       >

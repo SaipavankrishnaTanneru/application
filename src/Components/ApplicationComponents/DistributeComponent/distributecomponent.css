@@ -84,7 +84,8 @@
   font-weight: 600;
   display: flex;
   align-items: center;
-  gap: 6px; /* spacing between icon & text */
+  gap: 5px; 
+  margin-bottom: 15px;
 }
 
 .distribute_content_graph .category {

@@ -1,0 +1,31 @@
+.accordionWidget {
+  margin-bottom: 8px;
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.accordionHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 14px;
+  cursor: pointer;
+}
+
+.accordionTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.accordionToggleIcon {
+  width: 18px;
+  height: 18px;
+  transition: transform 0.3s ease;
+}
+
+.accordionBody {
+  padding: 10px 14px;
+  border-top: 1px solid #eee;
+}

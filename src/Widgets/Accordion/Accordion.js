@@ -1,19 +1,18 @@
 import React, { useState, useEffect } from "react";
 import PropTypes from "prop-types";
-import "./Accordion.css";
+import styles from "./Accordion.module.css";  
 import arrowUpIcon from "../../assets/iconamoon_arrow-up.svg";
 import arrowDownIcon from "../../assets/iconamoon_arrow-down.svg";
 
 const AccordionWidget = ({ id, title, children }) => {
   const [isOpen, setIsOpen] = useState(false);
 
-
   useEffect(() => {
     const handleAccordionEvent = (event) => {
       if (event.detail === id) {
-        setIsOpen((prev) => !prev); 
+        setIsOpen((prev) => !prev);
       } else {
-        setIsOpen(false); 
+        setIsOpen(false);
       }
     };
 
@@ -28,21 +27,21 @@ const AccordionWidget = ({ id, title, children }) => {
   };
 
   return (
-    <div className="accordion-widget">
-      <div className="accordion-header" onClick={handleToggle}>
+    <div className={styles.accordionWidget}>
+      <div className={styles.accordionHeader} onClick={handleToggle}>
         {/* Title */}
-        <span className="accordion-title">{title}</span>
+        <span className={styles.accordionTitle}>{title}</span>
 
         {/* Toggle Arrow */}
         <img
           src={isOpen ? arrowUpIcon : arrowDownIcon}
           alt={isOpen ? "Collapse" : "Expand"}
-          className="accordion-toggle-icon"
+          className={styles.accordionToggleIcon}
         />
       </div>
 
       {/* Body */}
-      {isOpen && <div className="accordion-body">{children}</div>}
+      {isOpen && <div className={styles.accordionBody}>{children}</div>}
     </div>
   );
 };

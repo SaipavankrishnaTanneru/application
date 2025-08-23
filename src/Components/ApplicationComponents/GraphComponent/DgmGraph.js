@@ -2,7 +2,7 @@ import React from "react";
 import GraphWidget from "../../../Widgets/GraphWidget/BarGraph";
 import AccordionWidget from "../../../Widgets/Accordion/Accordion";
 import dgmIcon from "../../../assets/Paper.svg";
-import "./DgmGraph.css";
+import styles from "./DgmGraph.module.css";   
 
 const DgmGraph = () => {
   const dgmData = {
@@ -18,19 +18,37 @@ const DgmGraph = () => {
   }));
 
   const bars = [
-    { dataKey: "Issued", color: "#0000ff" },
-    { dataKey: "Sold", color: "#ffa500" },
+    {
+      dataKey: "Issued",
+      gradientType: "linear",
+      gradient: [
+        { offset: "0%", color: "#F31616" },
+        { offset: "100%", color: "#8D0D6F" },
+      ],
+      legendColor: "#F31616",
+      label: "Issued",
+    },
+    {
+      dataKey: "Sold",
+      gradientType: "radial",
+      gradient: [
+        { offset: "0%", color: "#45D92E" },
+        { offset: "100%", color: "#07968F" },
+      ],
+      legendColor: "#45D92E",
+      label: "Sold",
+    },
   ];
 
   return (
-    <div className="Dgm_graph mt-3">
+    <div className={`${styles.dgmGraph} mt-3`}>
       <AccordionWidget
         id="dgm-graph"
         className="dgm-accordion"
         title={
-          <div className="dgm-header">
-            <img src={dgmIcon} alt="DGM Icon" className="dgm-header-icon" />
-            <span className="dgm-header-title">DGM Graph</span>
+          <div className={styles.dgmHeader}>
+            <img src={dgmIcon} alt="DGM Icon" className={styles.dgmHeaderIcon} />
+            <span className={styles.dgmHeaderTitle}>DGM Graph</span>
           </div>
         }
       >
