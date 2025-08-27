@@ -1,0 +1,55 @@
+.nav_container {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+}
+
+.step_nav {
+  display: flex;
+  width: 100%;
+  border: 1px solid #e2e8f0;
+  border-radius: 6px 6px 0 0;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.step_tab {
+  flex: 1;
+  padding: 12px 0;
+  font-weight: 500;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #333;
+  background-color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.step_tab.active {
+  background-color: #2e2bff;
+  color: #fff;
+}
+
+.step_tab:not(.active):hover {
+  background-color: #f4f6ff;
+}
+
+.step_number {
+  background-color: #2e2bff;
+  color: #fff;
+  border-radius: 50%;
+  width: 24px;
+  height: 24px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+}
+
+.step_tab.active .step_number {
+  background-color: #fff;
+  color: #2e2bff;
+}

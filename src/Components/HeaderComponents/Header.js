@@ -1,19 +1,17 @@
-import React from 'react';
-import LogoComponent from '../../Components/HeaderComponents/LogoComponent';
-import SearchComponent from '../../Components/HeaderComponents/SearchComponent';
-import UserInfoComponent from '../../Components/HeaderComponents/UserInfoComponent';
-import '../../Components/HeaderComponents/header.css';
+import React from "react";
+import LogoComponent from "./LogoComponent";
+import SearchComponent from "./SearchComponent";
+import UserInfoComponent from "./UserInfoComponent";
+import styles from "./Header.module.css";
 
 const Header = () => {
   return (
-    <header className="top_header">
-       <div className='logo-item'>
-           <LogoComponent/>
-       </div>
-       <div className='left_header'>
-          <SearchComponent/>
-          <UserInfoComponent/>
-       </div>
+    <header className={styles.top_header}>
+      <LogoComponent />
+      <div className={styles.left_header}>
+        <SearchComponent />
+        <UserInfoComponent />
+      </div>
     </header>
   );
 };

@@ -22,7 +22,12 @@ const CustomLegend = ({ bars = [] }) => (
 const BarGraph = ({ data = [], bars = [] }) => (
   <div className={styles.graphWidget}>
     <ResponsiveContainer width="100%" height={200}>
-      <BarChart data={data} margin={{ top: 5, right: 5, left: 5, bottom: 5 }}>
+      <BarChart
+        data={data}
+        margin={{ top: 5, right: 5, left: 5, bottom: 5 }}
+        barCategoryGap="30%"  
+        barGap={5}             
+      >
         {/* Gradients for each bar */}
         <defs>
           {bars.map((bar, i) => {
@@ -70,11 +75,17 @@ const BarGraph = ({ data = [], bars = [] }) => (
           })}
         </defs>
 
+   
         <XAxis
           dataKey="year"
+          type="category"   
           axisLine={false}
           tickLine={false}
+          interval={0}      
+          tickMargin={8}  
           style={{ fontSize: "11px" }}
+          gap={3}
+          
         />
 
         {bars.map((bar, i) => (
@@ -86,7 +97,7 @@ const BarGraph = ({ data = [], bars = [] }) => (
                 ? `url(#gradient-${bar.dataKey})`
                 : bar.fill || "#999"
             }
-            radius={6}
+            radius={8}
             barSize={20}
           />
         ))}

@@ -1,15 +1,15 @@
-import React from 'react';
-import searchIcon from '../../assets/Vector.svg';
-import './header.css';
+import React from "react";
+import searchIcon from "../../assets/Vector.svg";
+import styles from "./SearchComponent.module.css";
 
 const SearchComponent = () => {
   return (
-    <div className="navsearch_item search_component">
-      <div className="tophead_searchflex">
-        <img src={searchIcon} alt="search icon" className="search_icon" />
+    <div className={styles.search_component}>
+      <div className={styles.tophead_searchflex}>
+        <img src={searchIcon} alt="search icon" className={styles.search_icon} />
         <input
           type="text"
-          className="sc_topheader_input"
+          className={styles.sc_top_header_input}
           placeholder="Ask for anything"
         />
       </div>

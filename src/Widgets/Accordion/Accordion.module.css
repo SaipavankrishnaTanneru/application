@@ -1,31 +1,39 @@
-.accordionWidget {
-  margin-bottom: 8px;
-  background: #fff;
-  border-radius: 6px;
-  overflow: hidden;
+.accordionRoot {
+  border: 1px solid #E6E4F0 !important;
+  border-radius: 10px !important;
+  box-shadow: none !important; /* default no shadow */
+  overflow: hidden !important; /* ensures corners clip */
+  transition: 
+    box-shadow 0.25s ease-in-out !important,
+    border 0.25s ease-in-out !important,
+    backdrop-filter 0.25s ease-in-out !important,
+    background-color 0.25s ease-in-out !important;
+  
 }
 
-.accordionHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 14px;
-  cursor: pointer;
+.accordionExpanded {
+  border: 1px solid #3425FF !important; /* fallback solid border */
+  border-style: solid !important;
+  border-radius: 10px !important; 
+
+  border-image-source: radial-gradient(
+    100% 246.53% at 97.06% 0%,
+    rgba(255, 255, 255, 0) 0%,
+    #3425FF 100%
+  ) !important;
+  border-image-slice: 1 !important;
+  border-image-width: 1 !important;
+  border-image-repeat: stretch !important;
+
+box-shadow: 0 8px 16px rgba(0, 0, 0, 0.14), 0 0 2px rgba(0,0,0,0.12) !important;
+
+  backdrop-filter: blur(18px) !important;
+  background-color: rgba(255, 255, 255, 0.5) !important;
 }
 
-.accordionTitle {
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
-}
 
-.accordionToggleIcon {
-  width: 18px;
-  height: 18px;
-  transition: transform 0.3s ease;
-}
 
-.accordionBody {
-  padding: 10px 14px;
-  border-top: 1px solid #eee;
+.accordionDetails {
+  padding: 0.75rem 1rem !important;
+  border-radius: 0 0 10px 10px !important; /* bottom corners */
 }

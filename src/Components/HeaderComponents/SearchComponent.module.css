@@ -1,0 +1,29 @@
+.search_component {
+  width: 50%;
+}
+
+.tophead_searchflex {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  border-radius: 8px;
+  border: 1px solid #EBECEF;
+  background: #FAFAFA;
+  padding: 0px 14px;
+  width: 374px;
+}
+
+.search_icon {
+  width: 16px;
+  height: 16px;
+}
+
+.sc_top_header_input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 12px;
+  font-weight: 400;
+  color: rgba(0, 0, 0, 0.25);
+  background: #FAFAFA;
+}

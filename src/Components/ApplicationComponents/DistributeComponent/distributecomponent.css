@@ -86,6 +86,7 @@
   align-items: center;
   gap: 5px; 
   margin-bottom: 15px;
+
 }
 
 .distribute_content_graph .category {
@@ -102,6 +103,7 @@
 .distribute_content_graph .styleanim {
    width: 282px;
    height: 22px;
+   margin-top: 10px;
 }
 
 

@@ -2,7 +2,8 @@ import React from "react";
 import AccordionWidget from "../../../Widgets/Accordion/Accordion";
 import GraphWidget from "../../../Widgets/GraphWidget/BarGraph";
 import zoneIcon from "../../../assets/Paper.svg";
-import styles from "./ZoneGraph.module.css";   // ⬅️ use CSS module
+import MetricCards from "../AnalyticsComponent/MetricCards";
+import styles from "./ZoneGraph.module.css";
 
 const ZoneGraph = () => {
   const data = [
@@ -36,20 +37,27 @@ const ZoneGraph = () => {
   ];
 
   return (
-    <div className={`${styles.zoneGraph} mt-2`}>
+    <div className={styles.zone_graph}>
       <AccordionWidget
         id="zone-graph"
-        className="zone-accordion"
-        title={
-          <div className={styles.zoneHeader}>
-            <img
-              src={zoneIcon}
-              alt="Zone Icon"
-              className={styles.zoneHeaderIcon}
-            />
-            <span className={styles.zoneHeaderTitle}>Zone Wise Graph</span>
+        header={(expanded) => (
+          <div className={styles.zone_header_wrapper}>
+            <div className={styles.zone_header_left}>
+              <img
+                src={zoneIcon}
+                alt="Zone Icon"
+                className={styles.zone_header_icon}
+              />
+              <span className={styles.zone_header_title}>Zone Wise Graph</span>
+            </div>
+
+            {!expanded && (
+              <div className={styles.zone_header_right}>
+                <MetricCards />
+              </div>
+            )}
           </div>
-        }
+        )}
       >
         <GraphWidget data={data} bars={bars} />
       </AccordionWidget>

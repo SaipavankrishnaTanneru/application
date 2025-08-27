@@ -1,0 +1,45 @@
+.stepperContainer {
+  width: 100%;
+  background: #fff;
+  border-radius: 8px 8px 0 0;
+  border: 1px solid #e0e0e0;
+  padding: 8px 0;
+}
+
+/* Step Label */
+.stepLabel {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #444;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.stepLabel:hover {
+  color: #2e2bff;
+}
+
+/* Active Step Label */
+.activeStepLabel {
+  color: #2e2bff !important;
+  font-weight: 600;
+}
+
+/* Step Number Circle */
+.stepNumber {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #d1d5db;
+  color: #fff;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.activeStepNumber {
+  background: #2e2bff !important;
+  color: #fff !important;
+}

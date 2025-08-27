@@ -2,7 +2,8 @@ import React from "react";
 import GraphWidget from "../../../Widgets/GraphWidget/BarGraph";
 import AccordionWidget from "../../../Widgets/Accordion/Accordion";
 import campusIcon from "../../../assets/Paper.svg";
-import styles from "./CampusGraph.module.css";   
+import MetricCards from "../AnalyticsComponent/MetricCards";
+import styles from "./CampusGraph.module.css";
 
 const CampusGraph = () => {
   const campusData = {
@@ -41,20 +42,27 @@ const CampusGraph = () => {
   ];
 
   return (
-    <div className={`${styles.campusGraph} mt-2`}>
+    <div className={styles.campus_graph}>
       <AccordionWidget
         id="campus-graph"
-        className="campus-accordion"
-        title={
-          <div className={styles.campusHeader}>
-            <img
-              src={campusIcon}
-              alt="Campus Icon"
-              className={styles.campusHeaderIcon}
-            />
-            <span className={styles.campusHeaderTitle}>Campus Graph</span>
+        header={(expanded) => (
+          <div className={styles.campus_header_wrapper}>
+            <div className={styles.campus_header_left}>
+              <img
+                src={campusIcon}
+                alt="Campus Icon"
+                className={styles.campus_header_icon}
+              />
+              <span className={styles.campus_header_title}>Campus Graph</span>
+            </div>
+
+            {!expanded && (
+              <div className={styles.campus_header_right}>
+                <MetricCards />
+              </div>
+            )}
           </div>
-        }
+        )}
       >
         <GraphWidget data={formattedData} bars={bars} />
       </AccordionWidget>

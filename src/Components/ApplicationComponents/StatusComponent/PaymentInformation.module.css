@@ -1,0 +1,91 @@
+.payment_information {
+  width: 100%;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 2rem;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.header {
+  border-radius: 10px;
+background: #E6E5FF;
+
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 1.25rem;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.header > div {
+color: #08007C;
+
+font-size: 14px;
+font-style: normal;
+font-weight: 600;
+line-height: normal;
+}
+
+.header strong {
+  display: block;
+  font-size: 12px;
+  font-weight: 600;
+
+  margin-bottom: 0.25rem;
+  color: #4C4C4C;
+line-height: normal;
+}
+
+.form {
+  flex-grow: 1;
+  padding: 0 1.25rem;
+}
+
+.form_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.table_wrapper {
+
+  border-left: 1px solid #E6E5FF;   
+  border-right: 1px solid #E6E5FF;  
+}
+
+
+.table th {
+  background:  #E6E5FF;
+  font-weight: 600;
+  font-size: 12px;
+  color: #3425FF;;
+  text-align: left;
+  padding: 0.5rem;
+}
+
+.table td {
+  color: #333;
+  font-size: 13px;
+  padding: 0.5rem;
+}
+
+.submit_wrapper {
+  text-align: center;
+  padding-top: 1rem;
+}
+
+.submit_btn {
+  background-color: #3425ff !important;
+  color: #fff !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  padding: 0.6rem 1.6rem !important;
+  border-radius: 8px !important;
+  text-transform: none;
+  box-shadow: none !important;
+}

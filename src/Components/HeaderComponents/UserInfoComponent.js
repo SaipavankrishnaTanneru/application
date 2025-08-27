@@ -1,12 +1,12 @@
 import React from "react";
 import profileimg from "../../assets/profileimg.png";
-import './UserInfo.css';
+import styles from "./UserInfoComponent.module.css";
 
 const UserInfoComponent = () => {
   return (
-    <div className="user-info">
+    <div className={styles.user_info}>
       {/* Bell Icon */}
-      <div className="bell-icon me-3">
+      <button className={styles.bell_icon} aria-label="Notifications">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           width="25"
@@ -26,14 +26,14 @@ const UserInfoComponent = () => {
             strokeLinejoin="round"
           />
         </svg>
-      </div>
+      </button>
 
       {/* Profile Info */}
-      <div className="userinfo d-flex align-items-center">
-        <img src={profileimg} alt="Profile" className="profile-img me-2" />
-        <div className="user-details text-start">
-          <div className="username">Sai Pavan</div>
-          <div className="role">role</div>
+      <div className={styles.userinfo}>
+        <img src={profileimg} alt="Profile" className={styles.profile_img} />
+        <div className={styles.user_details}>
+          <p className={styles.username}>Sai Pavan</p>
+          <p className={styles.role}>role</p>
         </div>
         <svg
           xmlns="http://www.w3.org/2000/svg"

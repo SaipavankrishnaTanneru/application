@@ -1,0 +1,35 @@
+.metric_cards_container {
+  display: inline-flex; /* keeps pills inline */
+  gap: 8px;
+  align-items: center;
+  width:100%;
+}
+
+.percentage_badge {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  background: #fff;
+}
+
+.green_border {
+  border: 1px solid #22c55e;
+  background: #e8f9f0;
+}
+
+.red_border {
+  border: 1px solid #ef4444;
+  background: #fde8e8;
+}
+
+.green_text {
+  color: #22c55e;
+}
+
+.red_text {
+  color: #ef4444;
+}

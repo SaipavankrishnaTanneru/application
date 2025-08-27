@@ -2,7 +2,8 @@ import React from "react";
 import GraphWidget from "../../../Widgets/GraphWidget/BarGraph";
 import AccordionWidget from "../../../Widgets/Accordion/Accordion";
 import dgmIcon from "../../../assets/Paper.svg";
-import styles from "./DgmGraph.module.css";   
+import MetricCards from "../AnalyticsComponent/MetricCards";
+import styles from "./DgmGraph.module.css";
 
 const DgmGraph = () => {
   const dgmData = {
@@ -41,16 +42,27 @@ const DgmGraph = () => {
   ];
 
   return (
-    <div className={`${styles.dgmGraph} mt-3`}>
+    <div className={styles.dgm_graph}>
       <AccordionWidget
         id="dgm-graph"
-        className="dgm-accordion"
-        title={
-          <div className={styles.dgmHeader}>
-            <img src={dgmIcon} alt="DGM Icon" className={styles.dgmHeaderIcon} />
-            <span className={styles.dgmHeaderTitle}>DGM Graph</span>
+        header={(expanded) => (
+          <div className={styles.dgm_header_wrapper}>
+            <div className={styles.dgm_header_left}>
+              <img
+                src={dgmIcon}
+                alt="DGM Icon"
+                className={styles.dgm_header_icon}
+              />
+              <span className={styles.dgm_header_title}>DGM Graph</span>
+            </div>
+
+            {!expanded && (
+              <div className={styles.dgm_header_right}>
+                <MetricCards />
+              </div>
+            )}
           </div>
-        }
+        )}
       >
         <GraphWidget data={formattedData} bars={bars} />
       </AccordionWidget>

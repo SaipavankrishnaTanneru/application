@@ -1,6 +1,4 @@
-.graphWidget {
-  padding: 1rem;
-}
+
 
 /* Custom legend */
 .customLegend {
@@ -14,7 +12,7 @@
   display: flex;
   align-items: center;
   font-size: 12px;
-  color: #444;
+  color: #333; 
 }
 
 .customLegendDot {
@@ -22,24 +20,33 @@
   height: 12px;
   border-radius: 50%;
   margin-right: 6px;
+  border: 1px solid #ccc; /* makes dot visible even if light color */
 }
 
 /* Recharts axis labels */
 :global(.recharts-cartesian-axis-tick-value) {
-  font-size: 12px;
-  fill: #555;
+  font-size: 12px !important;
+  fill: #444 !important;
+  font-family: "Inter", sans-serif;
+}
+
+:global(.recharts-cartesian-axis-tick tspan) {
+  font-size: 12px !important;
+  fill: #444 !important;
 }
 
 /* Tooltip */
 :global(.recharts-tooltip-wrapper) {
   font-size: 12px;
+  pointer-events: none; /* prevents blocking hover */
 }
 
 :global(.recharts-default-tooltip) {
   background: #fff !important;
   border: 1px solid #ddd !important;
-  border-radius: 4px !important;
-  padding: 6px 8px !important;
-  font-size: 12px;
-  color: #333;
+  border-radius: 6px !important;
+  padding: 6px 10px !important;
+  font-size: 12px !important;
+  color: #333 !important;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
 }
